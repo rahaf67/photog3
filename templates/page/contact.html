@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+ {% block content %}
+
+     <form action="{% url 'contact' %}" method="POST" >
+
+         {% csrf_token %}
+
+
+         <h1>Contact Us</h1>
+         <label for="FirstName">First name:</label><input type="text" name="name" size="15" placeholder="Your name...">
+         <br/><label for="lastName">Email:</label><input type="email" name="email" size="15" placeholder="Your email is.."/><br/>
+         <label for="subject">Subject:</label><input type="text" name="subject" size="15">
+
+
+         <label for="subject">Your Massage</label><textarea id="subject" name="massage" placeholder="Write something.." >
+</textarea><br/>
+         <input type="submit" value="submit">
+
+     </form>
+
+
+ {% endblock %}
